@@ -1,0 +1,10 @@
+<!--pages/main.wxml-->
+<view class='container'>
+
+  <view wx:for="{{list}}" wx:key="{{index}}" class="item">
+  <image src='../../resources/img/logo.png' class="image"></image>
+   <text class="text">{{item.title}}</text>
+   <text class="text">{{item.url}}</text>
+  </view>
+
+</view>

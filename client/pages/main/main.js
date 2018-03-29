@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: []
+    list: [],
+    isSub: true
   },
 
   /**
@@ -14,39 +15,42 @@ Page({
   onLoad: function (options) {
     
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+  requestData: function(){
     wx.request({
       url: 'https://xw3h51ux.qcloud.la/weapp/main',
       success: (res) => {
         console.log(res.data);
-        let data  = res.data.data;
+        let data = res.data.data;
         console.log(data);
         this.setData({
           list: data.list
         });
       },
-      fail: function(error){
+      fail: function (error) {
         console.log(error);
       }
     });
+  },
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+   
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-   
+    console.log("onShow");
+    this.requestData();
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+    console.log("onhide");
   },
 
   /**
@@ -75,5 +79,33 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+  onItemClick: function(event){
+    var item = event.currentTarget.dataset.item;
+
+    wx.showToast({
+      title: 'click' + item.title,
+    });
+    wx.navigateTo({
+      url: '/pages/detail/detail?item='+JSON.stringify(item)
+    })
+  },
+  navToCreate: function(event){
+    wx.navigateTo({
+      url: '/pages/create/create'
+    })
+  },
+  scroll: function(event){
+    console.log(event.detail);
+    if (event.detail.scrollTop > 40){
+      this.setData({
+        isSub: false
+      })
+    }else{
+      this.setData({
+        isSub: true
+      })
+    }
+  },
+  
 })

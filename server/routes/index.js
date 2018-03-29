@@ -33,4 +33,7 @@ router.get('/message', controllers.message.get)
 router.post('/message', controllers.message.post)
 // GET 个人实现的路由
 router.get('/main', controllers.main)
+
+// 创建个人收藏
+router.post('/create', controllers.create)
 module.exports = router

@@ -1,19 +1,18 @@
-// pages/main.js
+// pages/detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    title: "详情页"
   },
 
   /**
-  
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    console.log(JSON.parse(options.item));
   },
 
   /**

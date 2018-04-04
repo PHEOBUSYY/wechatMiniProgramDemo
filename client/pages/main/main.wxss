@@ -11,38 +11,45 @@
   text-align: left;
   display: flex;
   flex-direction: row;
-  padding: 5px 5px;
+  padding: 1rem 1rem;
   background: #f3f3f3;
   margin-bottom: 5px;
   align-items: center;
 }
 
 .image {
-  width: 40px;
-  height: 40px;
+  width: 64px;
+  height: 64px;
+  border-radius: 3px;
 }
 
-.text {
-  text-align: center;
-  margin: 3px;
-  line-height: 40px;
-}
 
-.subTitle {
+.text_title {
+  display: block;
   width: 100%;
   padding: 5px;
-  background: red;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-.subTitle2 {
+.text_content {
+  display: block;
   width: 100%;
-  position: fixed;
-  background: blue;
   padding: 5px;
-  top: 0;
+  font-size: 14px;
+  font-weight: 400;
+
 }
 
 .scroll {
   position: relative;
   height: 100%;
+}
+.createBtn {
+  width: 90%;
+  background: #32B1C7;
+  color: #FFFFFF;
+}
+.media_content{
+  margin: 0 1rem;
 }

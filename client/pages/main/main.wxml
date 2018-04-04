@@ -1,19 +1,18 @@
 <!--pages/main.wxml-->
 <view class='container'>
   <scroll-view class="scroll" bindscroll="scroll" scroll-y>
-    <view class='banner'>
-      <image src='../../resources/img/logo.png' class="image"></image>
-    </view>
-    <view class='{{isSub ? "subTitle" : "subTitle2"}}'>
-      我是子标题
-    </view>
+
     <view wx:for="{{list}}" wx:key="{{index}}" data-item="{{item}}" class="item" bindtap='onItemClick'>
-      <image src='../../resources/img/logo.png' class="image"></image>
-      <text class="text">{{item.title}}</text>
-      <text class="text">{{item.url}}</text>
+      <image mode="aspectFit" src="{{item.logo ? item.logo : defaultLogo}}" class="image" binderror="imageLoadError" data-index="{{index}}" data-test="{{index}}"></image>
+      <view class="media_content">
+        <text class="text_title">{{item.title}}</text>
+        <text class="text_content">{{item.content || '--'}}</text>
+      </view>
     </view>
-    <view>
-      <text class="text" bindtap='navToCreate'>新增</text>
-    </view>
+
   </scroll-view>
+
+  <button class="createBtn" size="default" bindtap="navToCreate"> 新增 </button>
+
+
 </view>

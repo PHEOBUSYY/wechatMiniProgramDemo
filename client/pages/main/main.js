@@ -6,7 +6,7 @@ Page({
    */
   data: {
     list: [],
-    isSub: true
+    defaultLogo: '../../resources/img/wechat.png'
   },
 
   /**
@@ -87,10 +87,11 @@ Page({
       title: 'click' + item.title,
     });
     wx.navigateTo({
-      url: '/pages/detail/detail?item='+JSON.stringify(item)
+      url: '/pages/create/create?item='+JSON.stringify(item)
     })
   },
   navToCreate: function(event){
+    console.log("click");
     wx.navigateTo({
       url: '/pages/create/create'
     })
@@ -107,5 +108,14 @@ Page({
       })
     }
   },
-  
+  imageLoadError: function(event){
+    let index = event.target.dataset.index;
+   
+    let update = this.data.list;
+    update[index].logo = this.data.defaultLogo;
+    this.setData({
+      list: update
+    })
+
+  }
 })

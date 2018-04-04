@@ -4,7 +4,8 @@
     "pages/index/index",
     "pages/addCgi/addCgi",
     "pages/detail/detail",
-    "pages/create/create"
+    "pages/create/create",
+    "pages/settings/settings"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -12,5 +13,23 @@
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "Wafer Quick Start",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#32B1C7",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "首页",
+        "iconPath": "./resources/img/home1.png",
+        "selectedIconPath": "./resources/img/home.png"
+      },
+      {
+        "pagePath": "pages/settings/settings",
+        "text": "设置",
+        "iconPath": "./resources/img/settings1.png",
+        "selectedIconPath": "./resources/img/settings.png"
+      }
+    ]
   }
 }

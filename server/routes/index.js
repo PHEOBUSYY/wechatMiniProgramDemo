@@ -36,4 +36,5 @@ router.get('/main', controllers.main)
 
 // 创建个人收藏
 router.post('/create', controllers.create)
+router.del('/deleteById',controllers.deleteById)
 module.exports = router

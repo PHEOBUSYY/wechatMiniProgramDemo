@@ -1,1 +1,35 @@
 /* pages/create/create.wxss */
+.form {
+  padding:10px 20px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px 20px;
+  /* margin-bottom: 20px */
+}
+.logo {
+  width: 64px;
+  height: 64px;
+}
+.inputs{
+  margin: 10px;
+}
+.section {
+  padding: 10px;
+}
+.section_text{
+  font-size: 14px;
+  font-weight: 500;
+  /* margin-bottom: 5px; */
+}
+input {
+  /* background: red; */
+  border-bottom: 1px solid #f3f3f3;
+
+}
+.submit ,.reset {
+  width: 90%;
+  margin: 15px auto;
+}

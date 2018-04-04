@@ -1,0 +1,4 @@
+/* pages/settings/settings.wxss */
+.container {
+  padding: 10px;
+}

@@ -1,0 +1,14 @@
+<!--pages/appList/appList.wxml-->
+<view class="container">
+  <scroll-view scroll-y style="height: 100%;" >
+    <view class='appList'>
+      <view wx:for="{{list}}" wx:key="{{index}}" data-item='{{item}}' class='appItem' style="background:{{item.bg}}">
+        <view class="inner">
+          <image class="appLogo" mode="aspectFit"
+          src="../../resources/img/cloudy.png"></image>
+          <text class="appName">{{item.title}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

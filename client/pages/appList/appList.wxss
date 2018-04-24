@@ -1,0 +1,45 @@
+.container {
+  background: #14142c;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.appList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 15px;
+  width: 90%;
+  align-content: flex-start;
+}
+
+.appItem {
+  width: calc((100% - 15px * 1) / 2);
+  height: 200px;
+  margin-bottom: 15px;
+  /* background: #df6e66; */
+  border-radius: 15px;
+  border: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.appLogo {
+  width: 64px;
+  height: 64px;
+}
+
+.appName {
+  color: white;
+  font-size: 14px;
+}

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/appList/appList",
     "pages/main/main",
     "pages/index/index",
     "pages/addCgi/addCgi",
@@ -7,18 +8,18 @@
     "pages/settings/settings"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
+    "backgroundColor": "#14142c",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "Wafer Quick Start",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#14142c",
+    "navigationBarTitleText": "Wings",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    "selectedColor": "#32B1C7",
-    "backgroundColor": "#FFFFFF",
+    "selectedColor": "#df6e66",
+    "backgroundColor": "#14142c",
     "list": [
       {
-        "pagePath": "pages/main/main",
+        "pagePath": "pages/appList/appList",
         "text": "首页",
         "iconPath": "./resources/img/home1.png",
         "selectedIconPath": "./resources/img/home.png"

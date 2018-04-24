@@ -45,7 +45,7 @@ module.exports = async ctx => {
         .returning('id')
         .insert(query)
       console.log("create result", temp);
-      ctx.state.data = { msg: "success create" };
+      ctx.state.data = { msg: "success create!!!" };
     }
    
   } catch (err) {

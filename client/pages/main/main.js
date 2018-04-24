@@ -1,4 +1,7 @@
 // pages/main.js
+
+var config = require('../../config')
+var qcloud = require('../../vendor/wafer2-client-sdk/index')
 Page({
 
   /**
@@ -14,10 +17,10 @@ Page({
    */
   onLoad: function (options) {
     
-  },
+  }, 
   requestData: function(){
     wx.request({
-      url: 'https://xw3h51ux.qcloud.la/weapp/main',
+      url: `${config.service.host}/weapp/main`,
       success: (res) => {
         console.log(res.data);
         let data = res.data.data;

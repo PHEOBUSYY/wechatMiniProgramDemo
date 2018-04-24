@@ -1,4 +1,7 @@
 // pages/create/create.js
+var qcloud = require('../../vendor/wafer2-client-sdk/index')
+var config = require('../../config')
+
 Page({
 
   /**
@@ -82,7 +85,7 @@ Page({
     if(this.data.item){
       console.log('delte by id ',this.data.item.id);
       wx.request({
-        url: 'https://xw3h51ux.qcloud.la/weapp/deleteById',
+        url: `${config.service.host}/weapp/deleteById`,
         data: this.data.item,
         method: 'DELETE',
         // header: {
@@ -111,7 +114,7 @@ Page({
    console.log("param ", param);
 
     wx.request({
-      url: 'https://xw3h51ux.qcloud.la/weapp/create',
+      url: `${config.service.host}/weapp/create`,
       data: param,
       method: 'POST', 
       // header: {

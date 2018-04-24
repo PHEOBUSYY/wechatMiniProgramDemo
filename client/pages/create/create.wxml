@@ -20,8 +20,8 @@
           <textarea value="{{item.content}}" name="content" placeholder="请输入描述" />
         </view>
     <view class="btn-area ">
-      <button class="submit" bindtap="formSubmit" type="primary">{{item ? '修改' :'创建'}}</button>
-      <button class="reset" bindtap="formReset" type="{{item ? 'warn':'default'}}">{{item? '删除': '清空'}}</button>
+      <button class="submit" form-type="submit" type="primary">{{item ? '修改' :'创建'}}</button>
+      <button class="reset" form-type="reset" type="{{item ? 'warn':'default'}}">{{item? '删除': '清空'}}</button>
     </view>
   </form>
 </view>

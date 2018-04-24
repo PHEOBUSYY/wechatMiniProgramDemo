@@ -3,7 +3,6 @@
     "pages/main/main",
     "pages/index/index",
     "pages/addCgi/addCgi",
-    "pages/detail/detail",
     "pages/create/create",
     "pages/settings/settings"
   ],
